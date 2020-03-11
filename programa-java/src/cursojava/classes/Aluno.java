@@ -14,6 +14,20 @@ public class Aluno {
 		String dataMatricula;
 		String noeEscola;
 		String serieMatriculado;
+
+		public Aluno() { /*Cria dos dados na memoria - sendo padrao do java*/
+			
+		}
 		
+		public Aluno(String nomePadrao) {
+			nome = nomePadrao;
+		}
+		
+		public Aluno (String nomePadrao,int idadePadrao) {
+			nome = nomePadrao;
+			idade = idadePadrao;
+		}
 
 }
+
+	

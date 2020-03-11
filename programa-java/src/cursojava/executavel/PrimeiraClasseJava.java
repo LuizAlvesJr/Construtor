@@ -9,12 +9,15 @@ public class PrimeiraClasseJava {
 		
 		/*Obejeto ainda não existe*/
 		
-		Aluno aluno1;
+		Aluno aluno1 =new Aluno(); /*Aqui sera o joão*/
 	
 		/*Agora temos um objeto real na memória*/
-		Aluno aluno2 = new Aluno();
+		Aluno aluno2 = new Aluno();/*Aqui sera o pedro*/
 		
-
+		Aluno aluno3 = new Aluno();/*Aqui sera o alex*/
+		
+		Aluno aluno4 = new Aluno("Maria");
+		Aluno aluno5 = new Aluno ("José", 50);
 	}
 
 }

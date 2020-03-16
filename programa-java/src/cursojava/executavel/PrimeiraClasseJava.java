@@ -11,9 +11,22 @@ public class PrimeiraClasseJava {
 		/*Aluno1 é uma referencia para o ibejto aluno*/
 		Aluno aluno1 =new Aluno(); /*Aqui sera o joão*/
 		aluno1.setNome ("João");
+		aluno1.setIdade(50);
+		aluno1.setDataNascimento("19/05/1991");
+		aluno1.setRegistroGeral("398.234.4432-32");
+		aluno1.setNumeroCpf("321.433.543-43");
+		aluno1.setNomeMae("Carla");
+		aluno1.setNomePai("Antonio");
+		aluno1.setDataMatricula("10/01/2019");
+		aluno1.setSerieMatriculado("5");
+		aluno1.setNoeEscola("Escola JDEV treinamento");
+		
 		
 		System.out.println("Nome é = "+ aluno1.getNome());
+		System.out.println("A idade é = " + aluno1.getIdade());
+		System.out.println("Nascimento = " + aluno1.getDataNascimento());
 		
+		/*================================================================*/
 	
 		/*Agora temos um objeto real na memória*/
 		Aluno aluno2 = new Aluno();/*Aqui sera o pedro*/

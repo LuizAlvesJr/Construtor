@@ -156,6 +156,15 @@ public class Aluno {
 			return (nota1+nota2+nota3+nota4)/4;
 		}
 		
+		public String getAlunoAprovado() {
+			double media = this.getMediaNota();
+			if(media >= 70 ) { 
+				return "Aluno está aprovado";				
+			}else {
+				return "Aluno reprovado";
+			}
+		}
+		
 		
 		
 		

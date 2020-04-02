@@ -13,7 +13,7 @@ public class Aluno {
 	private	String nomeMae;
 	private	String nomePai;
 	private	String dataMatricula;
-	private	String noeEscola;
+	private	String nomeEscola;
 	private	String serieMatriculado;
 	private double nota4;
 	private double nota1;
@@ -102,12 +102,12 @@ public class Aluno {
 			this.dataMatricula = dataMatricula;
 		}
 
-		public String getNoeEscola() {
-			return noeEscola;
+		public String getNomeEscola() {
+			return nomeEscola;
 		}
 
-		public void setNoeEscola(String noeEscola) {
-			this.noeEscola = noeEscola;
+		public void setNomeEscola(String nomeEscola) {
+			this.nomeEscola = nomeEscola;
 		}
 
 		public String getSerieMatriculado() {
@@ -156,12 +156,12 @@ public class Aluno {
 			return (nota1+nota2+nota3+nota4)/4;
 		}
 		
-		public String getAlunoAprovado() {
+		public boolean getAlunoAprovado() {
 			double media = this.getMediaNota();
 			if(media >= 70 ) { 
-				return "Aluno está aprovado";				
+				return true;			
 			}else {
-				return "Aluno reprovado";
+				return false;
 			}
 		}
 		

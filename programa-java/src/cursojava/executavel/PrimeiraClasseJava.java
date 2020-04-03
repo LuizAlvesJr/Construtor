@@ -12,7 +12,7 @@ public class PrimeiraClasseJava {
 		
 		/*New Aluno() é uma instancia (Criação de objeto)*/
 		/*Aluno1 é uma referencia para o ibejto aluno*/
-		
+		Aluno aluno1 = new Aluno();
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno? ");
 		String idade = JOptionPane.showInputDialog("QUal a idade do aluno? ");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?" );
@@ -28,9 +28,9 @@ public class PrimeiraClasseJava {
 		String nota3 = JOptionPane.showInputDialog("Qual a nota 3? ");
 		String nota4 = JOptionPane.showInputDialog("Qual a nota 4? ");
 		
-		Aluno aluno1 = new Aluno(); /*Aqui sera o joão*/
+		
 		aluno1.setNome (nome);
-		aluno1.setIdade(Integer.valueOf(nome));  
+		aluno1.setIdade(Integer.valueOf(idade));  
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -44,6 +44,7 @@ public class PrimeiraClasseJava {
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
 		
+		/*
 		System.out.println("Nome é = "+ aluno1.getNome());
 		System.out.println("A idade é = " + aluno1.getIdade());
 		System.out.println("Nascimento = " + aluno1.getDataNascimento());
@@ -59,9 +60,15 @@ public class PrimeiraClasseJava {
 		System.out.printf("A nota média do aluno = "+ "%.2f",aluno1.getMediaNota());
 		System.out.println();
 		System.out.println("Resultado = "+ (aluno1.getAlunoAprovado()? "Aprovado" : "Reprovado"));
+		*/
 		
-		/*================================================================*/
-	
+		Aluno aluno = new Aluno();
+		
+		System.out.println(aluno1.toString());
+		System.out.println("Media Aluno = " + aluno1.getMediaNota());
+		System.out.println("Resultado = " + aluno1.getAlunoAprovado());
+		
+		
 	}
 
 }

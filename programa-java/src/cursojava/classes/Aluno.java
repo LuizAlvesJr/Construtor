@@ -139,12 +139,12 @@ public class Aluno {
 	}
 	
 
-	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota();
-		if (media >= 70) {
-			return true;
+	public String getAlunoAprovado() {
+		Double media = this.getMediaNota();
+		if (Double.valueOf(media) >= 70) {
+			return ("Aluno aprovado.");
 		} else {
-			return false;
+			return ("Aluno reprovado.");
 		}
 	}
 	

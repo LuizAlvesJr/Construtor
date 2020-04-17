@@ -141,10 +141,15 @@ public class Aluno {
 
 	public String getAlunoAprovado() {
 		Double media = this.getMediaNota();
-		if (Double.valueOf(media) >= 70) {
+		
+		if (media >= 50) {
+			if(media >= 70) {
 			return ("Aluno aprovado.");
 		} else {
-			return ("Aluno reprovado.");
+			return ("Aluno em recuperação.");
+		}
+		}else {
+			return "Aluno está aprovado.";
 		}
 	}
 	

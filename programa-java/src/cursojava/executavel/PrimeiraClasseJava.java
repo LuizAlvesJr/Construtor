@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
 
@@ -14,8 +15,11 @@ public class PrimeiraClasseJava {
 		// TODO Auto-generated method stub
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
+		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 
-		for (int qtd = 1; qtd <= 2; qtd++) {
+		for (int qtd = 1; qtd <= 5; qtd++) {
 
 			/* New Aluno() é uma instancia (Criação de objeto) */
 			/* Aluno1 é uma referencia para o ibejto aluno */
@@ -43,8 +47,9 @@ public class PrimeiraClasseJava {
 			 * aluno1.setNomeEscola(escola);
 			 */
 
-			for (int pos = 1; pos <= 4; pos++) {
-
+			for (int pos = 1; pos <= 1; pos++) {
+				
+			 
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + " ?");
 
@@ -71,6 +76,44 @@ public class PrimeiraClasseJava {
 				}
 			}
 
+
+			alunos.add(aluno1);
+		}
+		
+		for (Aluno aluno : alunos) { /*Listas separadas*/
+			
+			if (aluno.getAlunoAprovado().equalsIgnoreCase(StatusAluno.APROVADO)) {
+				alunosAprovados.add(aluno);
+			}else
+				if(aluno.getAlunoAprovado().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+					alunosRecuperacao.add(aluno);
+				}else {
+					alunosReprovados.add(aluno);
+				}
+				
+		}
+		
+		
+		System.out.println("----------------------Lista dos aprovados----------------------");
+		for (Aluno aluno : alunosAprovados) {
+			System.out.println("Resultado = "+ aluno.getAlunoAprovado()+ " Com media de = "+ aluno.getMediaNota());
+			
+		}
+		System.out.println("----------------------Lista dos reprovados----------------------");
+		for (Aluno aluno : alunosReprovados) {
+			System.out.println("Resultado = "+ aluno.getAlunoAprovado()+ " Com media de = "+ aluno.getMediaNota());
+			
+		}
+		System.out.println("----------------------Lista dos recuperação----------------------");
+		for (Aluno aluno : alunosRecuperacao) {
+			System.out.println("Resultado = "+ aluno.getAlunoAprovado()+ " Com media de = "+ aluno.getMediaNota());
+			
+		}
+
+	}
+
+}
+
 //
 //		System.out.println("Nome é = " + aluno1.getNome());
 //		System.out.println("A idade é = " + aluno1.getIdade());
@@ -87,25 +130,3 @@ public class PrimeiraClasseJava {
 //		System.out.printf("A nota média do aluno = " + "%.2f", aluno1.getMediaNota());
 //		System.out.println();
 //		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-
-			Aluno aluno = new Aluno();
-
-			alunos.add(aluno1);
-		}
-
-		for (Aluno aluno : alunos) {
-
-			if (aluno.getNome().equalsIgnoreCase("alex")) {
-
-				System.out.println(aluno);
-				System.out.println("Media Aluno = " + aluno.getMediaNota());
-				System.out.println("Resultado = " + aluno.getAlunoAprovado());
-				System.out.println("-------------------------------------------");
-				break;
-			}
-
-		}
-
-	}
-
-}
